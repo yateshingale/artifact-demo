@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mkdir -p output'
+                sh 'echo "Hello from Jenkins!" > output/message.txt'
+            }
+        }
+    }
+}
+
