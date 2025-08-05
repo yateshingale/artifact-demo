@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Generate Artifacts') {
             steps {
-                sh './generate.sh'
+                sh 'bash generate.sh'
             }
         }
 
