@@ -2,25 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Generate Artifacts') {
             steps {
-                echo 'Compiling the code...'
-                sh 'mkdir -p output'
-                sh 'echo "Build artifact content" > output/artifact.txt'
+                sh './generate.sh'
             }
         }
 
-        stage('Archive Artifact') {
+        stage('Archive Artifacts') {
             steps {
-                archiveArtifacts artifacts: 'output/*.txt', fingerprint: true
+                archiveArtifacts artifacts: 'output/*', fingerprint: true
             }
         }
     }
 
     post {
         always {
-            echo 'Cleaning up workspace...'
-            deleteDir()
+            echo 'Pipeline completed.'
         }
     }
 }
