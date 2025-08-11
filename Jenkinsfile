@@ -5,7 +5,7 @@ pipeline {
         string(name: 'BRANCH', defaultValue: 'main', description: 'Git branch to build')
         choice(name: 'ENV', choices: ['dev', 'qa', 'prod'], description: 'Deployment environment')
         booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run test cases?')
-        password(name: 'DEPLOY_KEY', defaultValue: '', description: 'Deployment password')
+        password(name: 'DEPLOY_KEY', defaultValue: 'Yatesh', description: 'Deployment password')
     }
 
     stages {
