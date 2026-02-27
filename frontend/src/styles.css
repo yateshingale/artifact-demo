@@ -1,0 +1,10 @@
+body { font-family: Inter, sans-serif; margin: 0; background: #f6f7fb; }
+.container, .auth-card { max-width: 780px; margin: 2rem auto; background: white; padding: 1rem 1.2rem; border-radius: 12px; }
+form { display: grid; gap: 0.6rem; }
+input, button { padding: 0.6rem; border-radius: 8px; border: 1px solid #ccc; }
+button { cursor: pointer; }
+.inline-form { grid-template-columns: 1fr 1fr auto; }
+ul { list-style: none; padding: 0; }
+li { display: flex; justify-content: space-between; margin: 0.5rem 0; gap: 1rem; }
+.error { color: #c62828; }
+header { display: flex; justify-content: space-between; align-items: center; }
